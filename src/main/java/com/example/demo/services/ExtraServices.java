@@ -31,7 +31,7 @@ public class ExtraServices {
 	}
 	
 	@PostMapping("/gts/{gid}/{sid}")
-	public Gardien ajoutSa(@PathVariable long gid,@PathVariable long sid) {
+	public Gardien ajoutSalleGardien(@PathVariable long gid,@PathVariable long sid) {
 		Salle c = sr.findById(sid).get();
 		Gardien e = gr.findById(gid).get();
 		e.setSalle(c);
